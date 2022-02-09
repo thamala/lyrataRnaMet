@@ -24,7 +24,6 @@ write.table(out, file="CG_met_glm.txt", row.names=F, quote=F, sep="\t")
 
 #run glm for genes with >= 10 cytosines
 df <- read.table("CG_met_glm.txt", header=T)
-df <- out
 df <- df[df$sites >= 10,]
 
 n <- length(unique(df$gene))
