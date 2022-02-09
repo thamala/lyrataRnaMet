@@ -45,7 +45,7 @@
     -div3 lyrata-arabis.snps \
     -beagle <(zcat J1.beagle.gprobs.gz) \
     -region DEG_field.txt \
-    -sites 0fold.sites > J1_DEG_field_est-sfs.txt
+    -sites 0fold.sites > J1_DEG_field_0fold_est-sfs.txt
 */
 
 #include <ctype.h>
