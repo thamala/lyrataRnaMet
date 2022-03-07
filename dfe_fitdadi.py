@@ -8,6 +8,7 @@ import dadi
 import dadi.DFE as DFE
 import matplotlib.pyplot as plt
 from dadi.DFE import *
+from scipy.stats import gamma, norm
     
 ## this function needs to added to the "DemogSelModels.py" file in the dadi installation folder    
 #def three_epoch(params, ns, pts):
