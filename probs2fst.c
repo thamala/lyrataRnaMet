@@ -56,7 +56,7 @@ void openFiles(int argc, char *argv[]);
 char **readPop(FILE *pop_file, int *n);
 Gene_s *readGenes(FILE *gene_file, int *n);
 void readBeagle(FILE *beagle_file, char ***pops, Gene_s *genes, int bp, int pop_n, int gene_n, int ind_n, int min, double maf);
-Var_s estVars(double **dosaga, int **plist, int pop_n, int ind_n, int plist_n, int min, double maf);
+Var_s estVars(double **dosage, int **plist, int pop_n, int ind_n, int plist_n, int min, double maf);
 double estFst(Var_s vars);
 int isNumeric(const char *s);
 void lineTerminator(char *line);
