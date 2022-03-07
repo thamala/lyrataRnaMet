@@ -2,11 +2,8 @@
 #Based on the tutorials at https://dadi.readthedocs.io/en/latest/user-guide/dfe-inference/ and https://github.com/LohmuellerLab/fitdadi/blob/master/manual_examples/manual.pdf
 #Tuomas Hämälä, January 2022
 
-import pickle, random
-import numpy as np
 import dadi
 import dadi.DFE as DFE
-import matplotlib.pyplot as plt
 from dadi.DFE import *
 from scipy.stats import gamma, norm
     
