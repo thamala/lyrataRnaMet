@@ -15,8 +15,8 @@ out <- rbindlist(lapply(1:n, function(i){
 	if(i==1|i==n|i%%10==0) cat("Line",i,"/",n,"\n")
 	gene <- df[df$chrom == genes$V1[i] & df$end >= genes$V2[i] & df$end <= genes$V3[i],]
 	if(nrow(gene) == 0) return()
-	met <- apply(gene[,4:ncol(gene)], 2, function(x){round(sum(x/100,na.rm=T))})
-	unmet <- apply(gene[,4:ncol(gene)], 2, function(x){round(sum(1-x/100,na.rm=T))})
+	met <- apply(gene[,4:ncol(gene)], 2, function(x){round(2*sum(x/100,na.rm=T))})
+	unmet <- apply(gene[,4:ncol(gene)], 2, function(x){round(2*sum(1-x/100,na.rm=T))})
 	data.frame(gene=genes$V5[i],met=as.numeric(met),unmet=as.numeric(unmet),sites=nrow(gene),id=names(met))
 }))
 out <- merge(out, info, by="id")
