@@ -50,6 +50,7 @@ theta_ns = theta0 * 2.76
 pts_l = [600,800,1000]
 spectra = DFE.Cache1D(demog_params, ns, DFE.DemogSelModels.three_epoch, pts_l=pts_l, gamma_bounds=(1e-5, 500), gamma_pts=300, verbose=True, mp=True)
 
+sel_params = [0.1, 1000]
 lower_bound = [0.001, 0]
 upper_bound = [1, 1e6]
 
