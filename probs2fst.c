@@ -282,12 +282,12 @@ void readBeagle(FILE *beagle_file, char ***pops, Gene_s *genes, int bp, int pop_
     while((read = getline(&line, &len, beagle_file)) != -1) {
         if(line[0] == '\n')
             continue;
-        lineTerminator(line);
         temp = strtok_r(line, "\t", &end);
         i = 1;
         j = 0;
         k = 0;
         if(strcmp(temp, "marker") == 0) {
+            lineTerminator(line);
             while(temp != NULL) {
                 if(i > 3) {
                     if(j == 0) {
