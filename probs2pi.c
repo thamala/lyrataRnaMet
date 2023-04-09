@@ -191,7 +191,6 @@ void readBeagle(FILE *beagle_file, Gene_s *genes, int bp, int gene_n, int min) {
     while((read = getline(&line, &len, beagle_file)) != -1) {
         if(line[0] == '\n')
             continue;
-        lineTerminator(line);
         temp = strtok_r(line, "\t", &end);
         i = 1;
         j = 0;
